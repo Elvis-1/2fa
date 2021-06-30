@@ -16,7 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('register', function () {
+//     return view('auth.register');
+// });
 Route::get('/home', function () {
     // dd(\Illuminate\Support\Facades\Auth::user());
     return view('home');
 })->middleware(['auth','verified']);
+
